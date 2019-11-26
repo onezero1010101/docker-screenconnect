@@ -1,0 +1,2 @@
+#!/bin/bash
+docker build -t screenconnect:19.4 .  --no-cache
