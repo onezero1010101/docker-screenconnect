@@ -1,0 +1,18 @@
+version: '2'
+services:
+  screenconnect:
+    image: screenconnect:19.4
+    container_name: screenconnect
+    ports:
+      - 8040:8040
+      - 8041:8041
+    environment:
+      TZ: "America/Indiana/Indianapolis"
+    volumes:
+      - vol:/opt/screenconnect/
+    restart: unless-stopped
+
+volumes:
+  vol:
+    driver: local
+#    external: false
