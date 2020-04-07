@@ -15,7 +15,9 @@ RUN mkdir /opt/screenconnect-installer
 #ADD ScreenConnect_Release.tar.gz /opt/screenconnect-installer/
 #ADD ScreenConnect_19.0.23665.7058_Release.tar.gz /opt/screenconnect-installer/
 #ADD ScreenConnect_19.2.24707.7131_Release.tar.gz /opt/screenconnect-installer/
-ADD ScreenConnect_19.4.25759.7247_Release.tar.gz /opt/screenconnect-installer/
+#ADD ScreenConnect_19.4.25759.7247_Release.tar.gz /opt/screenconnect-installer/
+#ADD ScreenConnect_19.6.27027.7360_Release.tar.gz /opt/screenconnect-installer/
+ADD ScreenConnect_20.1.27036.7360_Release.tar.gz /opt/screenconnect-installer/
 
 WORKDIR /opt/screenconnect-installer/
 #RUN tar xvf ScreenConnect_Release.tar.gz
