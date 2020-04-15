@@ -1,7 +1,7 @@
 version: '2'
 services:
   screenconnect:
-    image: screenconnect:19.4
+    image: screenconnect:20.1
     container_name: screenconnect
     ports:
       - 8040:8040
