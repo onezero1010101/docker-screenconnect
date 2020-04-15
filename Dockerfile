@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 
 # Install dependencies
 RUN apt-get update
@@ -11,16 +11,18 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN mkdir /opt/screenconnect-installer
 
 # Setup
-#ADD "https://www.screenconnect.com/Download?Action=DownloadLatest&Platform=Linux&PreRelease=false" /opt/screenconnect-installer/ScreenConnect_Release.tar.gz
+#Comment out if running local installers below and uncomment as needed
+ADD "https://www.screenconnect.com/Download?Action=DownloadLatest&Platform=Linux&PreRelease=false" /opt/screenconnect-installer/ScreenConnect_Release.tar.gz
 #ADD ScreenConnect_Release.tar.gz /opt/screenconnect-installer/
 #ADD ScreenConnect_19.0.23665.7058_Release.tar.gz /opt/screenconnect-installer/
 #ADD ScreenConnect_19.2.24707.7131_Release.tar.gz /opt/screenconnect-installer/
 #ADD ScreenConnect_19.4.25759.7247_Release.tar.gz /opt/screenconnect-installer/
 #ADD ScreenConnect_19.6.27027.7360_Release.tar.gz /opt/screenconnect-installer/
-ADD ScreenConnect_20.1.27036.7360_Release.tar.gz /opt/screenconnect-installer/
+#ADD ScreenConnect_20.1.27036.7360_Release.tar.gz /opt/screenconnect-installer/
 
 WORKDIR /opt/screenconnect-installer/
-#RUN tar xvf ScreenConnect_Release.tar.gz
+#Comment out if running local installers
+RUN tar xvf ScreenConnect_Release.tar.gz
 RUN echo -e "\n\n" | ScreenConnect_*_Install/install.sh
 
 # Volume
