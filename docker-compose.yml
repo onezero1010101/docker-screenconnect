@@ -3,6 +3,8 @@ services:
   screenconnect:
     image: screenconnect:20.1
     container_name: screenconnect
+    #command: /etc/init.d/screenconnect debug  #Not sure what this does
+    #command: sleep 7d # This keeps the service paused while I log into the container and update the service manually. When finished I revert.
     ports:
       - 8040:8040
       - 8041:8041
